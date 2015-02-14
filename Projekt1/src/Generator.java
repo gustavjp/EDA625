@@ -52,38 +52,48 @@ public class Generator {
      */
     public boolean isPrime(BigInteger n) {
         if (n.mod(two).compareTo(BigInteger.ZERO) == 0) {
+            System.out.println("Divisible by 2.");
             return false;
         }
         BigInteger r = BigInteger.ZERO;
         BigInteger s = n.subtract(BigInteger.ONE);
+        System.out.println("s set to " + s);
+        System.out.println("s mod 2 " + s.mod(two));
         while (s.mod(two).compareTo(BigInteger.ZERO) == 0) {
             s = s.divide(new BigInteger("2"));
-            r.add(BigInteger.ONE);
+            r = r.add(BigInteger.ONE);
         }
+        System.out.println("r set to " + r);
+        System.out.println("s set to " + s);
         for (int i = 0; i < 20; i++) {
+            System.out.println("cycle " + i);
             do {
                 a = new BigInteger(n.bitLength(), rand);
-            } while (a.mod(two).compareTo(BigInteger.ZERO) == 0
-                    || a.intValue() < 2 || a.compareTo(n.subtract(two)) == 1);
+            } while (a.compareTo(two) < 0 || a.compareTo(n.subtract(two)) == 1);
+            System.out.println("a set to " + a);
 
             BigInteger x = exp_mod(a, s, n);
+            System.out.println("exp done");
             if (x.compareTo(BigInteger.ONE) == 0) {
                 return true;
             }
             if (x.compareTo(n.subtract(BigInteger.ONE)) == 0) {
                 return true;
             }
-            for (BigInteger j = new BigInteger("1"); j.compareTo(r) == -1; j
+            for (BigInteger j = new BigInteger("1"); j.compareTo(r) == -1; j = j
                     .add(BigInteger.ONE)) {
+                System.out.println("j cycle " + j);
                 x = exp_mod(a, two.pow(j.intValue()).multiply(s), n);
                 //x = x.pow(2).mod(n);
                 if (x.equals(BigInteger.ONE)) {
+                    System.out.println("x is one");
                     return false;
                 } else if (x.equals(n.subtract(BigInteger.ONE))) {
                     return true;
                 }
             }
         }
+        System.out.println("nutting");
         return false;
     }
 }
