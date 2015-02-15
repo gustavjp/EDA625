@@ -2,3 +2,15 @@ For x^(2)s and 512 bits
 Total execution time: 13890 ms
 Total checking time: 25 ms
 -----------------DONE-----------------
+For x^(2)s, 10 primes and 512 bits
+Total execution time: 8256 ms
+Total checking time: 26 ms
+-----------------DONE-----------------
+For x^(2)s, 20 primes and 512 bits
+Total execution time: 33347 ms
+Total checking time: 54 ms
+-----------------DONE-----------------
+For x^(2)s, 10 primes and 512 bits
+Total execution time: 6763 ms
+Total checking time: 25 ms
+-----------------DONE-----------------

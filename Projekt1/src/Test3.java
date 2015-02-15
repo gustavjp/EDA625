@@ -8,8 +8,8 @@ import java.util.Random;
 
 public class Test3 {
     public static void main(String[] args) {
-        firstMethod();
         secondMethod();
+        firstMethod();
     }
 
     private static void firstMethod() {
@@ -27,7 +27,7 @@ public class Test3 {
                 tot = 0;
                 base = new BigInteger("2").pow((int) Math.pow(2, i));
                 time3 = System.currentTimeMillis();
-                while(n < 20) {
+                while(n < 10) {
                     found = false;
                     addition = new BigInteger((int) Math.pow(2, i), new Random());
                     if(addition.mod(new BigInteger("2")).equals(BigInteger.ZERO)) {

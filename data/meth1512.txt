@@ -2,3 +2,7 @@ For x^(j)s, 20 primes and 512 bits
 Total execution time: 24957 ms
 Total checking time: 52 ms
 -----------------DONE-----------------
+For x^(j)s, 20 primes and 512 bits
+Total execution time: 24715 ms
+Total checking time: 54 ms
+-----------------DONE-----------------

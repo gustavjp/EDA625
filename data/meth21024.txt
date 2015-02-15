@@ -2,3 +2,7 @@ For x^(2)s and 1024 bits
 Total execution time: 114295 ms
 Total checking time: 151 ms
 -----------------DONE-----------------
+For x^(2)s, 10 primes and 1024 bits
+Total execution time: 197418 ms
+Total checking time: 157 ms
+-----------------DONE-----------------
