@@ -1,0 +1,12 @@
+For x^(j)s and 4 bits
+Total execution time: 10 ms
+Total checking time: 2 ms
+-----------------DONE-----------------
+For x^(j)s and 8 bits
+Total execution time: 67 ms
+Total checking time: 5 ms
+-----------------DONE-----------------
+For x^(j)s and 16 bits
+Total execution time: 84 ms
+Total checking time: 1 ms
+-----------------DONE-----------------
