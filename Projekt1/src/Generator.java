@@ -77,6 +77,7 @@ public class Generator {
                 x = exp_mod(a, two.pow(j.intValue()).multiply(s), n);
                 //x = x.pow(2).mod(n);
                 if (x.equals(BigInteger.ONE)) {
+
                 } else if (x.equals(n.subtract(BigInteger.ONE))) {
                     return true;
                 }
