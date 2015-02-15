@@ -1,0 +1,4 @@
+For x^(j)s and 2048 bits
+Total execution time: 1964407 ms
+Total checking time: 954 ms
+-----------------DONE-----------------

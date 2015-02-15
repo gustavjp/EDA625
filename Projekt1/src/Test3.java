@@ -28,7 +28,7 @@ public class Test3 {
                 tot = 0;
                 base = two.pow((int) Math.pow(2, i));
                 time3 = System.currentTimeMillis();
-                while(n < 10) {
+                while(n < 20) {
                     found = false;
                     addition = new BigInteger((int) Math.pow(2, i), new Random());
                     if(addition.mod(new BigInteger("2")).equals(BigInteger.ZERO)) {
@@ -46,7 +46,7 @@ public class Test3 {
                     }
                 }
                 System.out.println(tot);
-                output = "For x^(j)s and " + (int) Math.pow(2, i) + " bits\n";
+                output = "For x^(j)s, " + n + " primes and " + (int) Math.pow(2, i) + " bits\n";
                 output += "Total execution time: " + (time2 - time3) + " ms\n";
                 output += "Total checking time: " + Objects.toString(tot, null) + " ms\n";
                 output += "-----------------DONE-----------------\n";
@@ -57,7 +57,7 @@ public class Test3 {
                 if (!file.exists()) {
                     file.createNewFile();
                 }
-                bw.write(output);
+                bw.append(output);
                 bw.close();
                 System.out.println("Data written to file.");
             }
@@ -101,7 +101,7 @@ public class Test3 {
                     }
                 }
                 System.out.println(tot);
-                output = "For x^(2)s and " + (int) Math.pow(2, i) + " bits\n";
+                output = "For x^(2)s, " + n + " primes and " + (int) Math.pow(2, i) + " bits\n";
                 output += "Total execution time: " + (time2 - time3) + " ms\n";
                 output += "Total checking time: " + Objects.toString(tot, null) + " ms\n";
                 output += "-----------------DONE-----------------\n";
@@ -112,7 +112,7 @@ public class Test3 {
                 if (!file.exists()) {
                     file.createNewFile();
                 }
-                bw.write(output);
+                bw.append(output);
                 bw.close();
                 System.out.println("Data written to file.");
             }
