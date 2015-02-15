@@ -1,4 +1,4 @@
-For x^(j)s and 512 bits
-Total execution time: 20684 ms
-Total checking time: 27 ms
+For x^(j)s, 20 primes and 512 bits
+Total execution time: 24957 ms
+Total checking time: 52 ms
 -----------------DONE-----------------

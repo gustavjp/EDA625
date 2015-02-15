@@ -64,7 +64,6 @@ public class Generator {
             do {
                 a = new BigInteger(n.bitLength(), rand);
             } while (a.compareTo(two) < 0 || a.compareTo(n.subtract(two)) == 1);
-
             BigInteger x = exp_mod(a, s, n);
             if (x.compareTo(BigInteger.ONE) == 0) {
                 return true;
@@ -77,7 +76,6 @@ public class Generator {
                 x = exp_mod(a, two.pow(j.intValue()).multiply(s), n);
                 //x = x.pow(2).mod(n);
                 if (x.equals(BigInteger.ONE)) {
-
                 } else if (x.equals(n.subtract(BigInteger.ONE))) {
                     return true;
                 }

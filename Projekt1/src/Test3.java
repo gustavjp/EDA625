@@ -17,7 +17,6 @@ public class Test3 {
             String output;
             Generator g = new Generator();
             BigInteger base;
-            BigInteger two = new BigInteger("2");
             BigInteger temp;
             BigInteger addition;
             boolean found;
@@ -26,7 +25,7 @@ public class Test3 {
             for(int i = 9; i < 12; i++) {
                 n = 0;
                 tot = 0;
-                base = two.pow((int) Math.pow(2, i));
+                base = new BigInteger("2").pow((int) Math.pow(2, i));
                 time3 = System.currentTimeMillis();
                 while(n < 20) {
                     found = false;
@@ -51,7 +50,7 @@ public class Test3 {
                 output += "Total checking time: " + Objects.toString(tot, null) + " ms\n";
                 output += "-----------------DONE-----------------\n";
                 File file = new File("/home/gus/code/EDA625/data/meth1" + (int) Math.pow(2, i) +".txt");
-                FileWriter fw = new FileWriter(file.getAbsoluteFile());
+                FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
                 BufferedWriter bw = new BufferedWriter(fw);
                 // if file doesn't exists, then create it
                 if (!file.exists()) {
@@ -72,7 +71,6 @@ public class Test3 {
             String output;
             Generator g = new Generator();
             BigInteger base;
-            BigInteger two = new BigInteger("2");
             BigInteger temp;
             BigInteger addition;
             boolean found;
@@ -81,7 +79,7 @@ public class Test3 {
             for(int i = 9; i < 12; i++) {
                 n = 0;
                 tot = 0;
-                base = two.pow((int) Math.pow(2, i));
+                base = new BigInteger("2").pow((int) Math.pow(2, i));
                 time3 = System.currentTimeMillis();
                 while(n < 10) {
                     found = false;
@@ -106,7 +104,7 @@ public class Test3 {
                 output += "Total checking time: " + Objects.toString(tot, null) + " ms\n";
                 output += "-----------------DONE-----------------\n";
                 File file = new File("/home/gus/code/EDA625/data/meth2" + (int) Math.pow(2, i) +".txt");
-                FileWriter fw = new FileWriter(file.getAbsoluteFile());
+                FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
                 BufferedWriter bw = new BufferedWriter(fw);
                 // if file doesn't exists, then create it
                 if (!file.exists()) {
