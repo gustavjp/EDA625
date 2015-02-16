@@ -30,13 +30,13 @@ public class Test3 {
                 while(n < 10) {
                     found = false;
                     addition = new BigInteger((int) Math.pow(2, i), new Random());
-                    if(addition.mod(new BigInteger("2")).equals(BigInteger.ZERO)) {
+                    if(!addition.testBit(0)) {
                         addition = addition.add(BigInteger.ONE);
                     }
                     temp = base.add(addition);
                     if(sieve(temp)) {
                         time1 = System.currentTimeMillis();
-                        found = g.isPrimeB(temp);
+                        found = g.isPrimeA(temp);
                         time2 = System.currentTimeMillis();
                     }
                     if(found) {
@@ -84,7 +84,7 @@ public class Test3 {
                 while(n < 10) {
                     found = false;
                     addition = new BigInteger((int) Math.pow(2, i), new Random());
-                    if(addition.mod(new BigInteger("2")).equals(BigInteger.ZERO)) {
+                    if(!addition.testBit(0)) {
                         addition = addition.add(BigInteger.ONE);
                     }
                     temp = base.add(addition);
@@ -121,7 +121,7 @@ public class Test3 {
     }
     
     public static boolean sieve(BigInteger b) {
-        if(b.mod(new BigInteger("2")).equals(BigInteger.ZERO)) {
+        if(!b.testBit(0)) {
             return false;
         }
         for(int i = 3; i < 65000; i += 2) {

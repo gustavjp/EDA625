@@ -1,0 +1,16 @@
+For x^(j)s, 20 primes and 1024 bits
+Total execution time: 185902 ms
+Total checking time: 306 ms
+-----------------DONE-----------------
+For x^(j)s, 10 primes and 1024 bits
+Total execution time: 210978 ms
+Total checking time: 165 ms
+-----------------DONE-----------------
+For x^(j)s, 10 primes and 1024 bits
+Total execution time: 179907 ms
+Total checking time: 157 ms
+-----------------DONE-----------------
+For x^(j)s, 10 primes and 1024 bits
+Total execution time: 103922 ms
+Total checking time: 159 ms
+-----------------DONE-----------------
