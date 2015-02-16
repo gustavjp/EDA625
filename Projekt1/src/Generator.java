@@ -1,22 +1,11 @@
 import java.util.Random;
 import java.math.BigInteger;
 
-/**
- *
- * @author san11sba
- *
- */
 public class Generator {
     final BigInteger two = new BigInteger("2");
     BigInteger a;
     Random rand = new Random();
 
-    /**
-     * @param a bas
-     * @param x exponent
-     * @param N diva
-     * @return
-     */
     private BigInteger exp_mod(BigInteger a, BigInteger x, BigInteger N) {
         if (a.equals(BigInteger.ZERO)) {
             return BigInteger.ZERO;
@@ -32,10 +21,6 @@ public class Generator {
         }
     }
 
-    /**
-     * @param n
-     * @return
-     */
     public boolean isPrimeA(BigInteger n) {
         if (!n.testBit(0)) {
             return false;
@@ -60,9 +45,7 @@ public class Generator {
             for (BigInteger j = new BigInteger("1"); j.compareTo(r) == -1; j = j
                     .add(BigInteger.ONE)) {
                 x = exp_mod(a, two.pow(j.intValue()).multiply(s), n);
-                //x = x.pow(2).mod(n);
-                if (x.equals(BigInteger.ONE)) {
-                } else if (x.equals(n.subtract(BigInteger.ONE))) {
+                if (x.equals(n.subtract(BigInteger.ONE))) {
                     return true;
                 }
             }
@@ -93,10 +76,8 @@ public class Generator {
             }
             for (BigInteger j = new BigInteger("1"); j.compareTo(r) == -1; j = j
                     .add(BigInteger.ONE)) {
-                //x = exp_mod(a, two.pow(j.intValue()).multiply(s), n);
                 x = x.pow(2).mod(n);
-                if (x.equals(BigInteger.ONE)) {
-                } else if (x.equals(n.subtract(BigInteger.ONE))) {
+                if (x.equals(n.subtract(BigInteger.ONE))) {
                     return true;
                 }
             }

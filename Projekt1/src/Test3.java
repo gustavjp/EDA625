@@ -49,7 +49,7 @@ public class Test3 {
                 output += "Total execution time: " + (time2 - time3) + " ms\n";
                 output += "Total checking time: " + Objects.toString(tot, null) + " ms\n";
                 output += "-----------------DONE-----------------\n";
-                File file = new File("/home/gus/code/EDA625/data/meth1" + (int) Math.pow(2, i) +".txt");
+                File file = new File("data/meth1" + (int) Math.pow(2, i) +".txt");
                 FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
                 BufferedWriter bw = new BufferedWriter(fw);
                 // if file doesn't exists, then create it
@@ -65,7 +65,7 @@ public class Test3 {
             e.printStackTrace();
         }
     }
-    
+
     private static void secondMethod() {
         try {
             String output;
@@ -103,7 +103,7 @@ public class Test3 {
                 output += "Total execution time: " + (time2 - time3) + " ms\n";
                 output += "Total checking time: " + Objects.toString(tot, null) + " ms\n";
                 output += "-----------------DONE-----------------\n";
-                File file = new File("/home/gus/code/EDA625/data/meth2" + (int) Math.pow(2, i) +".txt");
+                File file = new File("data/meth2" + (int) Math.pow(2, i) +".txt");
                 FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
                 BufferedWriter bw = new BufferedWriter(fw);
                 // if file doesn't exists, then create it
@@ -119,7 +119,7 @@ public class Test3 {
             e.printStackTrace();
         }
     }
-    
+
     public static boolean sieve(BigInteger b) {
         if(!b.testBit(0)) {
             return false;

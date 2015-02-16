@@ -1,0 +1,4 @@
+For x^(2)s, 10 primes and 1024 bits
+Total execution time: 162421 ms
+Total checking time: 141 ms
+-----------------DONE-----------------
