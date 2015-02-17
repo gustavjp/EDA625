@@ -6,3 +6,23 @@ For x^(j)s, 10 primes and 1024 bits
 Total execution time: 162810 ms
 Total checking time: 234 ms
 -----------------DONE-----------------
+For x^(j)s, 10 primes and 1024 bits
+Total execution time: 243254 ms
+Total checking time: 295 ms
+-----------------DONE-----------------
+For x^(j)s, 10 primes and 1024 bits
+Total execution time: 281020 ms
+Total checking time: 290 ms
+-----------------DONE-----------------
+For x^(j)s, 10 primes and 1024 bits
+Total execution time: 155348 ms
+Total checking time: 188 ms
+-----------------DONE-----------------
+For x^(j)s, 10 primes and 1024 bits
+Total execution time: 198325 ms
+Total checking time: 212 ms
+-----------------DONE-----------------
+For x^(j)s, 10 primes and 1024 bits
+Total execution time: 171315 ms
+Total checking time: 223 ms
+-----------------DONE-----------------

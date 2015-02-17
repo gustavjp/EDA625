@@ -6,3 +6,23 @@ For x^(2)s, 10 primes and 2048 bits
 Total execution time: 2284433 ms
 Total checking time: 940 ms
 -----------------DONE-----------------
+For x^(2)s, 10 primes and 2048 bits
+Total execution time: 1009847 ms
+Total checking time: 981 ms
+-----------------DONE-----------------
+For x^(2)s, 10 primes and 2048 bits
+Total execution time: 1479434 ms
+Total checking time: 930 ms
+-----------------DONE-----------------
+For x^(2)s, 10 primes and 2048 bits
+Total execution time: 1314666 ms
+Total checking time: 903 ms
+-----------------DONE-----------------
+For x^(2)s, 10 primes and 2048 bits
+Total execution time: 2404530 ms
+Total checking time: 913 ms
+-----------------DONE-----------------
+For x^(2)s, 10 primes and 2048 bits
+Total execution time: 1761151 ms
+Total checking time: 936 ms
+-----------------DONE-----------------
