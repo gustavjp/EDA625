@@ -2,7 +2,3 @@ For x^(j)s, 10 primes and 2048 bits
 Total execution time: 2765445 ms
 Total checking time: 1954 ms
 -----------------DONE-----------------
-For x^(j)s, 10 primes and 2048 bits
-Total execution time: 4896261 ms
-Total checking time: 1384 ms
------------------DONE-----------------
