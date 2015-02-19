@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
 
@@ -21,31 +22,31 @@ public class Test3 {
             BigInteger addition;
             boolean found;
             long time1 = 0, time2 = 0, time3, tot;
-            int n;
+            ArrayList<BigInteger> bigList;
             for(int i = 9; i < 12; i++) {
-                n = 0;
+                bigList = new ArrayList<BigInteger>();
                 tot = 0;
                 base = new BigInteger("2").pow((int) Math.pow(2, i));
                 time3 = System.currentTimeMillis();
-                while(n < 10) {
+                while(bigList.size() <= 10) {
                     found = false;
                     addition = new BigInteger((int) Math.pow(2, i), new Random());
                     if(!addition.testBit(0)) {
                         addition = addition.add(BigInteger.ONE);
                     }
                     temp = base.add(addition);
-                    if(sieve(temp)) {
+                    if(sieve(temp) && !bigList.contains(temp)) {
                         time1 = System.currentTimeMillis();
                         found = g.isPrimeA(temp);
                         time2 = System.currentTimeMillis();
                     }
                     if(found) {
                         tot += time2 - time1;
-                        n++;
+                        bigList.add(temp);
                     }
                 }
                 System.out.println(tot);
-                output = "For x^(j)s, " + n + " primes and " + (int) Math.pow(2, i) + " bits\n";
+                output = "For x^(j)s, " + bigList.size() + " primes and " + (int) Math.pow(2, i) + " bits\n";
                 output += "Total execution time: " + (time2 - time3) + " ms\n";
                 output += "Total checking time: " + Objects.toString(tot, null) + " ms\n";
                 output += "-----------------DONE-----------------\n";
@@ -75,31 +76,31 @@ public class Test3 {
             BigInteger addition;
             boolean found;
             long time1 = 0, time2 = 0, time3, tot;
-            int n;
+            ArrayList<BigInteger> bigList;
             for(int i = 9; i < 12; i++) {
-                n = 0;
+                bigList = new ArrayList<BigInteger>();
                 tot = 0;
                 base = new BigInteger("2").pow((int) Math.pow(2, i));
                 time3 = System.currentTimeMillis();
-                while(n < 10) {
+                while(bigList.size() <= 10) {
                     found = false;
                     addition = new BigInteger((int) Math.pow(2, i), new Random());
                     if(!addition.testBit(0)) {
                         addition = addition.add(BigInteger.ONE);
                     }
                     temp = base.add(addition);
-                    if(sieve(temp)) {
+                    if(sieve(temp) && !bigList.contains(temp)) {
                         time1 = System.currentTimeMillis();
                         found = g.isPrimeB(temp);
                         time2 = System.currentTimeMillis();
                     }
                     if(found) {
                         tot += time2 - time1;
-                        n++;
+                        bigList.add(temp);
                     }
                 }
                 System.out.println(tot);
-                output = "For x^(2)s, " + n + " primes and " + (int) Math.pow(2, i) + " bits\n";
+                output = "For x^(2)s, " + bigList.size() + " primes and " + (int) Math.pow(2, i) + " bits\n";
                 output += "Total execution time: " + (time2 - time3) + " ms\n";
                 output += "Total checking time: " + Objects.toString(tot, null) + " ms\n";
                 output += "-----------------DONE-----------------\n";
