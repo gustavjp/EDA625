@@ -8,15 +8,18 @@ import java.util.Objects;
 import java.util.Random;
 
 public class Test3 {
+    public static Generator g = new Generator();
     public static void main(String[] args) {
-        firstMethod();
-        secondMethod();
+        System.out.println(g.inv_mod(new BigInteger("16"), new BigInteger("7")).toString());
+        
+        //firstMethod();
+        //secondMethod();
     }
 
     private static void firstMethod() {
         try {
             String output;
-            Generator g = new Generator();
+            
             BigInteger base;
             BigInteger temp;
             BigInteger addition;
@@ -70,7 +73,6 @@ public class Test3 {
     private static void secondMethod() {
         try {
             String output;
-            Generator g = new Generator();
             BigInteger base;
             BigInteger temp;
             BigInteger addition;

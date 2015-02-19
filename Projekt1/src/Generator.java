@@ -84,4 +84,26 @@ public class Generator {
         }
         return false;
     }
+
+    public BigInteger inv_mod(BigInteger a, BigInteger m) {
+        BigInteger d1 = m, d2 = a, v1 = BigInteger.ZERO, v2 = BigInteger.ONE;
+        BigInteger q, t2, t3;
+        while(!d2.equals(BigInteger.ZERO)) {
+            q = d1.divide(d2);
+            System.out.println(q.toString() + " = " + d1.toString() + " / " + d2.toString());
+            t2 = v1.subtract(q.multiply(v2));
+            System.out.println(t2.toString() + " = " + v1.toString() + " - " + q.toString() + " * " + v2.toString());
+            t3 = d1.subtract(q.multiply(d2));
+            System.out.println(t3.toString() + " = " + d1.toString() + " - " + q.toString() + " * " + d2.toString());
+            v1 = v2;
+            d1 = d2;
+            v2 = t2; 
+            d2 = t3;
+        }
+        if(d1.equals(BigInteger.ONE)) {
+            return d1;
+        }
+        System.out.println("NoPe");
+        return BigInteger.ZERO;
+    }
 }
