@@ -46,7 +46,7 @@ public class Test3 {
                     }
                 }
                 System.out.println(tot);
-                output = "For x^(j)s, " + bigList.size() + " primes and " + (int) Math.pow(2, i) + " bits\n";
+                output = "For x^2(j)s, " + bigList.size() + " primes and " + (int) Math.pow(2, i) + " bits\n";
                 output += "Total execution time: " + (time2 - time3) + " ms\n";
                 output += "Total checking time: " + Objects.toString(tot, null) + " ms\n";
                 output += "-----------------DONE-----------------\n";
