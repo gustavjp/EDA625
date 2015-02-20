@@ -13,8 +13,9 @@ public class Test3 {
 
     public static void main(String[] args) {
 
-        //RSA();
-        primeFinder();
+        //System.out.println(g.inv_mod(new BigInteger("420"), new BigInteger("17")));
+        RSA();
+        //primeFinder();
     }
 
     private static void RSA() {
@@ -28,7 +29,6 @@ public class Test3 {
         do{
             s = new BigInteger(N.bitLength(), new Random());
         } while(s.compareTo(N) >= 0 || s.compareTo(BigInteger.ZERO) < 1);
-        s = BigInteger.ZERO;
         System.out.println("Message: " + s.toString());
         BigInteger c = g.exp_mod(s, e, N);
         System.out.println("Encrypted message: " + c.toString());
