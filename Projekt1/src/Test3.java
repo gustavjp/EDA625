@@ -10,7 +10,7 @@ import java.util.Random;
 public class Test3 {
     public static Generator g = new Generator();
     public static void main(String[] args) {
-        System.out.println(g.inv_mod(new BigInteger("16"), new BigInteger("7")).toString());
+        System.out.println(g.inv_mod(new BigInteger("21"), new BigInteger("93")).toString());
         
         //firstMethod();
         //secondMethod();

@@ -101,7 +101,10 @@ public class Generator {
             d2 = t3;
         }
         if(d1.equals(BigInteger.ONE)) {
-            return d1;
+            while(v1.compareTo(BigInteger.ZERO) < 0) {
+                v1 = v1.add(m);
+            }
+            return v1;
         }
         System.out.println("NoPe");
         return BigInteger.ZERO;
