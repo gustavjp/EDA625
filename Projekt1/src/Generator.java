@@ -21,6 +21,14 @@ public class Generator {
         }
     }
 
+    /**
+     * A Rabin-Miller test
+     *
+     * @param n 
+     *          the potential prime to be checked
+     * @return
+     *          true if n is prime, false if not
+     */
     public boolean isPrime(BigInteger n) {
         if (!n.testBit(0)) {
             return false;
@@ -36,22 +44,24 @@ public class Generator {
                 a = new BigInteger(n.bitLength(), rand);
             } while (a.compareTo(two) < 0 || a.compareTo(n.subtract(two)) > 0);
             BigInteger x = exp_mod(a, s, n);
-            if (x.compareTo(BigInteger.ONE) == 0) {
-                return true;
+            if (x.equals(BigInteger.ONE) || x.equals(n.subtract(BigInteger.ONE))) {
+                continue;
             }
-            if (x.equals(n.subtract(BigInteger.ONE))) {
-                return true;
-            }
-            for (BigInteger j = new BigInteger("1"); j.compareTo(r) == -1; j = j
-                    .add(BigInteger.ONE)) {
+            BigInteger j = new BigInteger("1");
+            for (; j.compareTo(r) == -1; j = j.add(BigInteger.ONE)) {
                 x = x.pow(2).mod(n);
                 //x = exp_mod(a, two.pow(j.intValue()).multiply(s), n);
-                if (x.equals(n.subtract(BigInteger.ONE))) {
-                    return true;
+                if (x.equals(BigInteger.ONE)) {
+                    return false;
+                } else if (x.equals(n.subtract(BigInteger.ONE))) {
+                    break;
                 }
             }
+            if (r.equals(j)) {
+                return false;
+            }
         }
-        return false;
+        return true;
     }
 
     public BigInteger inv_mod(BigInteger a, BigInteger m) {
