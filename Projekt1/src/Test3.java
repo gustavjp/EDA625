@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
@@ -12,12 +13,26 @@ public class Test3 {
     public static Generator g = new Generator();
 
     public static void main(String[] args) {
-
-        //System.out.println(g.inv_mod(new BigInteger("420"), new BigInteger("17")));
+        //Assignment 2:
+        primeFinder();
+        
+        //Assignment 3
+        ArrayList<BigInteger> list = twoPrimes(512);
+        for (BigInteger b : list) {
+            System.out.println(b.toString());
+        }
+        
+        //Assignment 4
+        BigInteger inv = g.inv_mod(new BigInteger("420"), new BigInteger("17"));
+        System.out.println(inv.toString());
+        
+        //Assignment 5
         RSA();
-        //primeFinder();
     }
 
+    /**
+     * Generates a random message, encrypts it and decrypts it.
+     */
     private static void RSA() {
         ArrayList<BigInteger> bigList = twoPrimes(512);
         BigInteger e = new BigInteger("2").pow(16).add(BigInteger.ONE);
@@ -39,6 +54,14 @@ public class Test3 {
         }
     }
 
+    /**
+     * Generates two random primes.
+     *
+     * @param bitLength
+     *                  the bitlength of the two primes
+     * @return
+     *          an arraylist with two primes
+     */
     private static ArrayList<BigInteger> twoPrimes(int bitLength) {
         BigInteger base = new BigInteger("2").pow(bitLength - 1);
         BigInteger addition;
@@ -61,6 +84,12 @@ public class Test3 {
         return bigList;
     }
 
+    /**
+     * Does a check for randomly generated BigIntegers until 100
+     * of bitlenghts 512, 1024 and 2048 are found.
+     *
+     * Results are stored to a .txt-file.
+     */
     private static void primeFinder() {
         try {
             String output;
@@ -114,6 +143,15 @@ public class Test3 {
         }
     }
 
+    /**
+     * A very simple sieve to check a potential prime.
+     *
+     * @param b
+     *          the potential prime
+     * @return
+     *          true if not divisible by anything between 0 and 65000
+     *          false if composite
+     */
     private static boolean sieve(BigInteger b) {
         if(!b.testBit(0)) {
             return false;

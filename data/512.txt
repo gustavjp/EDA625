@@ -1,0 +1,4 @@
+For x^2, 101 primes and 512 bits
+Total execution time: 54835 ms
+Total checking time: 4884 ms
+-----------------DONE-----------------
